@@ -1,1 +1,27 @@
-<p>form-suma works!</p>
+<div class="card">
+    <div class="card-header">
+      Formulario Suma
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="txtnumero1" class="form-label">Ingrese Número:</label>
+            <input type="number" class="form-control"
+            [(ngModel)]="suma.numero1"
+            id="txtnumero1" placeholder="Ingrese número">
+        </div>          
+        <div class="mb-3">
+            <label for="txtnumero2" class="form-label">Ingrese Número:</label>
+            <input type="number" class="form-control" 
+            [(ngModel)]="suma.numero2"
+            id="txtnumero2" placeholder="Ingrese número">
+        </div>
+        <hr />
+        <button type="button" (click)="calcularSuma()"
+         class="btn btn-primary">CALCULAR</button>
+        @if (mostrarResultado) {
+            <div class="alert alert-primary" role="alert">
+                {{suma.resultado}}
+            </div>
+        }
+    </div>
+  </div>
