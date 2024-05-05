@@ -1,1 +1,36 @@
 <p>form-lista works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (alumno of alumnos; track $index) {       
+            @if(alumno.nota <= 8){
+                <tr class="table-danger">
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.apellido}}</td>
+                    <td>{{alumno.nota}}</td>
+                  </tr>      
+            }
+            @else if(alumno.nota <= 14){
+                <tr class="table-warning">
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.apellido}}</td>
+                    <td>{{alumno.nota}}</td>
+                  </tr> 
+            }
+            @else {
+                <tr class="table-primary">
+                    <td>{{alumno.nombre}}</td>
+                    <td>{{alumno.apellido}}</td>
+                    <td>{{alumno.nota}}</td>
+                  </tr> 
+
+            }
+        }
+    </tbody>
+  </table>
