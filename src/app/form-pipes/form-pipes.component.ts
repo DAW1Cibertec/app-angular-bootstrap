@@ -9,4 +9,21 @@ import { Component } from '@angular/core';
 })
 export class FormPipesComponent {
 
+  currentDate = new Date();
+  clientes = [
+    {nombre: "Karla Gomez"},
+    {nombre: "luis salvatierra"},
+    {nombre: "CAMILA HURTADO"},
+    {nombre: "Pedro navaja"},
+    {nombre: "rodrigo Huaman"},
+  ];
+
+  cursos = [
+    {nombre: "Angular", precio: 2000},
+    {nombre: "Base de datos", precio: 3500},
+    {nombre: "Gestión de Proyectos", precio: 4500},
+    {nombre: "AWS - Developer", precio: 1500},
+  ]
+
+
 }
