@@ -1,0 +1,15 @@
+<div class="alert alert-primary" role="alert">
+    {{titulo}}
+    <p>{{contador}}</p> 
+</div>
+<hr />
+<img [src]="producto.imagen" />
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="text" class="form-control" 
+      id="exampleFormControlInput1" 
+     placeholder="name@example.com" [value]="producto.nombre">
+</div>
+<hr />
+<button type="button" class="btn btn-primary" (click)="metodoInicio()">Click me!</button>
+
