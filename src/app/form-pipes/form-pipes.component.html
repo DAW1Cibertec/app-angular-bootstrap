@@ -1,1 +1,33 @@
-<p>form-pipes works!</p>
+<h1>{{currentDate | date: 'shortDate'}}</h1>
+<hr />
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (cliente of clientes; track $index) {                  
+                <tr class="table-primary">
+                    <td>{{cliente.nombre | uppercase }}</td>
+                </tr>            
+        }
+    </tbody>
+  </table>
+<hr />
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (curso of cursos; track $index) {                  
+                <tr class="table-primary">
+                    <td>{{curso.nombre}}</td>
+                    <td>{{curso.precio | currency: 'S/.'}}</td>
+                </tr>            
+        }
+    </tbody>
+  </table>
